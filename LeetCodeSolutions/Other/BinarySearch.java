@@ -12,7 +12,6 @@ public class BinarySearch {
     }
 
     // Must be sorted.
-
     /**
      * Function for binary search.
      * @param searchContent         Integer array containing the search content.
@@ -53,7 +52,7 @@ public class BinarySearch {
      * @param target                Target to find the index for.
      * @param low                   The minimal index for the search range.
      * @param high                  The maximum index for the search range.
-     * @return
+     * @return                      The index of the target.
      */
     public static int recursiveBinarySearch(int[] searchContent, int target, int low, int high) {
 
