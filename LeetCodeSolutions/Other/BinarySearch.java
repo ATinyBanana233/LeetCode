@@ -25,6 +25,9 @@ public class BinarySearch {
 
         while (low <= high)
         {
+            //Alternatively
+            //int mid = low + ((high - low) / 2);
+            //int mid = (low + high) >>> 1;
             middle = (low + high) / 2;
             possibleTarget = searchContent[middle];
 
@@ -61,6 +64,9 @@ public class BinarySearch {
             return -1;
         }
 
+        //Alternatively
+        //int mid = low + ((high - low) / 2);
+        //int mid = (low + high) >>> 1;
         int middle = (low + high) / 2;
         int possibleTarget = searchContent[middle];
 
