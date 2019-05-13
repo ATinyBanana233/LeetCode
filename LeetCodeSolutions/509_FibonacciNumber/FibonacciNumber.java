@@ -58,4 +58,38 @@ public class Fibonacci {
 
         return fib[N];
     }
+
+    /**
+     * Function to iteratively calculate fibonacci number without allocating an array.
+     * @param N         The nth fibonacci number.
+     * @return          The nth fibonacci number.
+     */
+    public static int fibOptimized(int N) {
+        // Check
+        if (N < 0)
+        {
+            throw new IllegalArgumentException();
+        }
+
+        if (N <= 1)
+        {
+            return N;
+        }
+
+        // Fibonacci number start with 0th as well, so when N = 3, we have 4 fibonacci numbers.
+        // One more slot to hold 0th fibonacci number.
+        int previousOne = 1;
+        int previousTwo = 0;
+        int current = 0;
+
+        for (int i = 2; i <= N; i++)
+        {
+            current = previousOne + previousTwo;
+            previousTwo = previousOne;
+            previousOne = current;
+        }
+
+        return current;
+    }
+    }
 }
