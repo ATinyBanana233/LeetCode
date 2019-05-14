@@ -15,6 +15,9 @@ class Solution {
     public ListNode reverseList(ListNode head) {
         ListNode currToProcess = head, nextToProcess = null, prev = null;
 
+        if (head.next == null) {
+            return head;  // No reverse needed.
+        }
         while (currToProcess != null) {
             // Save the next node that needs to process.
             nextToProcess = currToProcess.next;
